@@ -1,0 +1,11 @@
+{
+  "name": "Yarn-goblin-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Nick-Major/Yarn-goblin-game.git",
+  "author": "Nick-Major <divanchik26@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^9.17.0"
+  }
+}
