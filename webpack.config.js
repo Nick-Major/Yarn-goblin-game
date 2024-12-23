@@ -50,7 +50,8 @@ module.exports = {
         }),
 
         new MiniCssExtractPlugin({
-            filename: '[name].css'
+            filename: '[name].css',
+            chunkFilename: "[id].css",
         })
     ],
     devServer: {
