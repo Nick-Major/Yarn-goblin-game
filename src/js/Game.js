@@ -1,5 +1,3 @@
-import rip from '../images/rip.png';
-
 const Killed = document.querySelector('.killed');
 const failed = document.querySelector('.failed');
 
