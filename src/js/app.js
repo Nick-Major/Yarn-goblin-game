@@ -1,11 +1,13 @@
 import image from '../images/goblin.png';
-import Game from './Game';
+import Game from './Game.js';
+
+const Killed = document.querySelector('.killed');
+const failed = document.querySelector('.failed');
 
 document.addEventListener('DOMContentLoaded', () => {
     const goblin = document.createElement("img");
     goblin.src = image;
     goblin.classList.add('goblin');
-
 
     function createBoard() {
         const board = document.createElement('div');
@@ -38,6 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             game.failToKillGoblin;
         }
-    })
+    });
 
 });

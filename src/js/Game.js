@@ -9,14 +9,15 @@ export default class Game {
     killGoblin() {
         if(this.cell.classList.contains('goblin')) {
             console.log(this.cell);
+            
             this.cell.remove('goblin');
             Killed.textContent++;
-        }
 
-        if(Killed.textContent >= 10) {
-            alert('Вы победили!');
-            Killed.textContent = 0;
-            failed.textContent = 0;
+            if (Killed.textContent == 10) {
+                alert('Вы победили!');
+                Killed.textContent = 0;
+                failed.textContent = 0;
+            }
         }
 
     }
@@ -24,12 +25,14 @@ export default class Game {
     failToKillGoblin() {
         if(this.cell.classList.contains('board-cell')) {
             failed.textContent++;
-        }
 
-        if(failed.textContent === 5) {
-            alert('Вы проиграли!!!');
-            Killed.textContent = 0;
-            failed.textContent = 0;
+            if(failed.textContent == 5) {
+                alert('Вы проиграли!!!');
+                Killed.textContent = 0;
+                failed.textContent = 0;
+            }
         }
     }
 }
+
+
