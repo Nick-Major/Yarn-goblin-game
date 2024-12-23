@@ -1,10 +1,14 @@
 .board {
     display: grid;
     width: 500px;
-    margin: 50px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
-    cursor: pointer;
+    pointer-events: auto;
+    cursor: url('../images/molotochek.png'), auto;
 }
 
 .board-cell {
@@ -13,6 +17,11 @@
     height: 125px;
 }
 
-.board-cell:hover {
-    background-color:greenyellow;
+.score {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 1px black;
+    margin: 20px auto 0px;
 }

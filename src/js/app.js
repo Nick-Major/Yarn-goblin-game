@@ -1,4 +1,5 @@
-import image from '../src/images/goblin.png';
+import image from '../images/goblin.png';
+import Game from './Game';
 
 document.addEventListener('DOMContentLoaded', () => {
     const board = document.createElement('div');
@@ -14,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const goblin = document.createElement("img");
     goblin.src = image;
+    goblin.classList.add('goblin');
+    console.log(goblin);
+    
 
     function movingPicture() {
         const board = document.querySelector('.board');
@@ -22,5 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     setInterval(movingPicture, 1000);
+
+    document.addEventListener('click', (event) => {
+        const game = new Game();
+
+        if(event.target.classList.contains('goblin')) {
+            game.killGoblin();
+        } else {
+            game.failToKillGoblin;
+        }
+    })
 
 });
