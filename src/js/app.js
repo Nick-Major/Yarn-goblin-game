@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
          </p>
     </div>`
     
-    document.body.insertAdjacentElement('afterbegin', scoreboard);
+    document.body.innerHTML = scoreboard;
 
     const goblin = document.createElement('img');
     goblin.src = image;

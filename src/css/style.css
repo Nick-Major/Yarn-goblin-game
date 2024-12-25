@@ -7,8 +7,6 @@
     transform: translate(-50%, -50%);
     grid-template-columns: repeat(4, 1fr);
     gap: 2px;
-    pointer-events: auto;
-    cursor: url('../images/molotochek.png'), auto;
 }
 
 .board-cell {
@@ -27,13 +25,17 @@
 }
 
 .goblin {
-    background-color: #fff;
+    cursor: url('../images/molotochek.png'), auto;
 }
 
 .Killed-score {
     color: green;
 }
 
-.failedScore {
+.failed-score {
     color: red;
+}
+
+.score {
+    background-color: orange;
 }
