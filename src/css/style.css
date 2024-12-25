@@ -29,3 +29,11 @@
 .goblin {
     background-color: #fff;
 }
+
+.Killed-score {
+    color: green;
+}
+
+.failedScore {
+    color: red;
+}

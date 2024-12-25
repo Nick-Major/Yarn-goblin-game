@@ -19,6 +19,14 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
             },
             {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader",
+                    },
+                ],
+            },
+            {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },

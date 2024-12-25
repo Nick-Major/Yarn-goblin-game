@@ -1,11 +1,20 @@
 import image from '../images/goblin.png';
 import Game from './Game.js';
 
-const Killed = document.querySelector('.killed');
-const failed = document.querySelector('.failed');
-
 document.addEventListener('DOMContentLoaded', () => {
-    const goblin = document.createElement("img");
+    const scoreboard = `
+    <div class="score">
+        <p class="Killed-score">Попаданий:
+            <span class="Killed">0</span>
+        </p>
+         <p class="failed-score">Промахов:
+            <span class="failed">0</span>
+         </p>
+    </div>`
+    
+    document.body.insertAdjacentElement('afterbegin', scoreboard);
+
+    const goblin = document.createElement('img');
     goblin.src = image;
     goblin.classList.add('goblin');
 
