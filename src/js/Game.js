@@ -1,22 +1,19 @@
-const Killed = document.querySelector('.killed');
-const failed = document.querySelector('.failed');
-
 export default class Game {
     constructor(cell) {
         this.cell = cell;
+        this.killed = document.querySelector('.killed');
+        this.failed = document.querySelector('.failed');
     }
 
     killGoblin() {
         if(this.cell.classList.contains('goblin')) {
-            console.log(this.cell);
-            
             this.cell.remove('goblin');
-            Killed.textContent++;
+            this.killed.textContent++;
 
-            if (Killed.textContent == 10) {
+            if (this.killed.textContent === 10) {
                 alert('Вы победили!');
-                Killed.textContent = 0;
-                failed.textContent = 0;
+                this.killed.textContent = 0;
+                this.failed.textContent = 0;
             }
         }
 
@@ -24,12 +21,12 @@ export default class Game {
 
     failToKillGoblin() {
         if(this.cell.classList.contains('board-cell')) {
-            failed.textContent++;
+            this.failed.textContent++;
 
-            if(failed.textContent == 5) {
+            if(failed.textContent === 5) {
                 alert('Вы проиграли!!!');
-                Killed.textContent = 0;
-                failed.textContent = 0;
+                this.killed.textContent = 0;
+                this.failed.textContent = 0;
             }
         }
     }
