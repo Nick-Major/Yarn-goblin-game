@@ -2,18 +2,6 @@ import image from '../images/goblin.png';
 import Game from './Game.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    // const scoreboard = `
-    // <div class="score">
-    //     <p class="Killed-score">Попаданий:
-    //         <span class="Killed">0</span>
-    //     </p>
-    //      <p class="failed-score">Промахов:
-    //         <span class="failed">0</span>
-    //      </p>
-    // </div>`
-    
-    // document.body.innerHTML = scoreboard;
-
     const Killed = document.createElement('span');
     Killed.classList.add('killed');
     Killed.textContent = 0;
@@ -29,17 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     score.appendChild(failed);
     score.appendChild(Killed);
 
-    console.log(Killed);
-    console.log(failed);
-    console.log(score);
-    
-
     const goblin = document.createElement('img');
     goblin.src = image;
     goblin.classList.add('goblin');
-
-    console.log(goblin);
-    
 
     function createBoard() {
         const board = document.createElement('div');
@@ -69,8 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if(event.target.classList.contains('goblin')) {
             game.killGoblin();
-        } else {
-            game.failToKillGoblin;
+        };
+
+        if(event.target.classList.contains('board-cell')) {
+            game.failToKillGoblin();
         }
     });
 

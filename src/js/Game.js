@@ -7,29 +7,29 @@ export default class Game {
 
     killGoblin() {
         if(this.cell.classList.contains('goblin')) {
-            this.cell.remove('goblin');
+            this.cell.remove();
             this.killed.textContent++;
 
-            if (this.killed.textContent === 10) {
+            if (this.killed.textContent == 10) {
                 alert('Вы победили!');
                 this.killed.textContent = 0;
                 this.failed.textContent = 0;
-            }
-        }
+            };
+        };
 
-    }
+    };
 
     failToKillGoblin() {
         if(this.cell.classList.contains('board-cell')) {
             this.failed.textContent++;
 
-            if(failed.textContent === 5) {
+            if(this.failed.textContent == 5) {
                 alert('Вы проиграли!!!');
                 this.killed.textContent = 0;
                 this.failed.textContent = 0;
-            }
-        }
-    }
+            };
+        };
+    };
 }
 
 
