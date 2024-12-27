@@ -1,3 +1,6 @@
+import rip from '../images/rip.png';
+import gob from '../images/goblin.png';
+
 export default class Game {
     constructor(cell) {
         this.cell = cell;
@@ -7,8 +10,11 @@ export default class Game {
 
     killGoblin() {
         if(this.cell.classList.contains('goblin')) {
-            this.cell.remove();
+            this.cell.src = rip;
+            // this.cell.src = gob;
+            // this.cell.remove();
             this.killed.textContent++;
+
 
             if (this.killed.textContent == 10) {
                 alert('Вы победили!');

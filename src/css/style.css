@@ -25,7 +25,10 @@
 }
 
 .goblin {
-    cursor: url('../images/molotochek.png'), auto;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    cursor: url(../images/molotochek.png), auto;
 }
 
 .Killed-score {
@@ -38,10 +41,4 @@
 
 .score {
     background-color: orange;
-}
-
-.dead {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
 }

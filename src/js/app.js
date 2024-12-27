@@ -1,5 +1,5 @@
-import image from '../images/goblin.png';
 import Game from './Game.js';
+import image from '../images/goblin.png';
 
 document.addEventListener('DOMContentLoaded', () => {
     const Killed = document.createElement('span');
@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     score.classList.add('score');
 
     document.body.append(score);
+    score.append('Промахов: ');
     score.appendChild(failed);
+    score.append('Попаданий: ');
     score.appendChild(Killed);
 
     const goblin = document.createElement('img');
-    goblin.src = image;
     goblin.classList.add('goblin');
 
     function createBoard() {
@@ -39,10 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function movingPicture() {
         const board = document.querySelector('.board');
         const randomCell = board.children[Math.floor(Math.random() * board.children.length)];
+        goblin.src = image;
         randomCell.append(goblin);
     }
     
-    setInterval(movingPicture, 1000);
+    setInterval(movingPicture, 1200);
 
     document.addEventListener('click', (event) => {
         const game = new Game(event.target);
